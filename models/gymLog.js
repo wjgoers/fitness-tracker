@@ -22,6 +22,6 @@ const gymLogSchema = new Schema({
     ]
 })
 
-const Gymlog = mongoose.model("gym-log", gymLogSchema)
+const Gymlog = mongoose.model("gymlog", gymLogSchema)
 
 module.exports = Gymlog
