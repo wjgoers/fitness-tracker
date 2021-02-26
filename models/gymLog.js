@@ -11,9 +11,9 @@ const gymLogSchema = new Schema({
 
     exercises: [
         {
-            type: {type: String}, 
-            name: {type: String}, 
-            duration: {type: Number},
+            type: {type: String, required: "You must enter an exercise"}, 
+            name: {type: String, required: "You must enter an name"}, 
+            duration: {type: Number, required: "You must enter an duration"},
             distance: {type: Number},
             weight: {type: Number},
             reps: {type: Number},
