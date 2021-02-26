@@ -4,6 +4,8 @@ const Gymlog = require("../models/gymLog.js");
 router.post("/api/workouts", (req, res) => {
   Gymlog.create({}).then((data) => {
     res.json(data);
+  }) .catch((err) => {
+    res.json(err);
   });
 });
 
@@ -18,6 +20,8 @@ router.get("/api/workouts", (req, res) => {
     },
   ]).then((data) => {
     res.json(data);
+  }).catch((err) => {
+    res.json(err);
   });
 });
 
@@ -35,6 +39,8 @@ router.put("/api/workouts/:id", (req, res) => {
     }
   ).then((data) => {
     res.json(data);
+  }).catch((err) => {
+    res.json(err);
   });
 });
 
@@ -51,7 +57,9 @@ router.get("/api/workouts/range", (req, res) => {
       .sort({_id: -1})
       .limit(7).then((data) => {
           res.json(data);
-      })
+      }).catch((err) => {
+        res.json(err);
+      });
 })
 
 module.exports = router;
